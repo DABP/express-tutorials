@@ -30,7 +30,7 @@ const options = {
   definition: {
     openapi: "3.0.0",
     info: {
-      title: "LogRocket Express API with Swagger",
+      title: "Meditator's Node Express API with Swagger",
       version: "0.1.0",
       description:
         "This is a simple CRUD API application made with Express and documented with Swagger",
@@ -39,9 +39,9 @@ const options = {
         url: "https://spdx.org/licenses/MIT.html",
       },
       contact: {
-        name: "LogRocket",
-        url: "https://logrocket.com",
-        email: "info@email.com",
+        name: "Meditator",
+        url: "https://velog.io/@yongh8445",
+        email: "yonghoon95@gmail.com",
       },
     },
     servers: [
@@ -59,7 +59,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use("/api-docs",
   swaggerUi.serve,
-  swaggerUi.setup(specs)
+  swaggerUi.setup(specs, { explorer: false })
 );
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
